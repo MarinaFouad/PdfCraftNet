@@ -127,12 +127,14 @@ any of these next once you've picked an approach.
   rotate, watermark, encrypt). Some of the more advanced original tools (OCR,
   format conversion, table extraction) would need additional libraries.
 
-watch the demo 
-
-https://github.com/MarinaFouad/PdfCraftNet/blob/main/PDF.mp4
 
 To add a new tool:
 1. Add a method to `Services/PdfToolsService.cs` (byte[] in → byte[] out).
 2. Add a `Pages/YourTool.cshtml` + `.cshtml.cs` pair, following the pattern of
    any existing tool (e.g. `RotatePdf`).
 3. Add a link to it in `Pages/Shared/_Layout.cshtml` and `Pages/Index.cshtml`.
+
+watch the demo 
+<h2>🎥 Demo</h2>
+
+<video src="PDF.mp4" controls width="800"></video>
