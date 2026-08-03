@@ -1,3 +1,8 @@
+
+watch the demo 
+<h2>🎥 Demo</h2>
+ 
+
 # PdfCraft.NET
 
 A small ASP.NET Core (Razor Pages) port of a subset of PDFCraft's tools. Unlike the
@@ -139,8 +144,3 @@ To add a new tool:
 2. Add a `Pages/YourTool.cshtml` + `.cshtml.cs` pair, following the pattern of
    any existing tool (e.g. `RotatePdf`).
 3. Add a link to it in `Pages/Shared/_Layout.cshtml` and `Pages/Index.cshtml`.
-
-watch the demo 
-<h2>🎥 Demo</h2>
-
-<video src="https://github.com/MarinaFouad/PdfCraftNet/blob/main/PDF.mp4" controls width="800"></video>
