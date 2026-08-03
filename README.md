@@ -7,6 +7,12 @@ version processes PDFs **server-side** using [PdfSharpCore](https://github.com/s
 
 ## Included tools (12)
 
+
+https://github.com/user-attachments/assets/1be9c065-fa5d-4ce7-97f0-a40fcfbf1c9d
+
+
+
+
 | Tool | Route | Description |
 |------|-------|-------------|
 | Merge PDF | `/Merge` | Combine multiple PDFs into one |
