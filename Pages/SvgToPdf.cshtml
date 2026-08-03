@@ -1,0 +1,22 @@
+@page
+@model PdfCraftNet.Pages.SvgToPdfModel
+@{
+    ViewData["Title"] = "SVG to PDF";
+}
+
+<div class="card">
+    <h1>🎨 SVG to PDF</h1>
+    <p class="subtitle">Convert a vector SVG file to a single-page PDF (rasterized).</p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">SVG file</label>
+        <input type="file" id="file" name="File" accept="image/svg+xml,.svg" required />
+
+        <button type="submit">Convert to PDF</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error">@Model.ErrorMessage</div>
+    }
+</div>

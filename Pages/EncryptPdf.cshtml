@@ -1,0 +1,29 @@
+@page
+@model PdfCraftNet.Pages.EncryptPdfModel
+@{
+    ViewData["Title"] = "Encrypt PDF";
+}
+
+<div class="card">
+    <h1>🔒 Encrypt PDF</h1>
+    <p class="subtitle">Password-protect a PDF so it requires a password to open.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">PDF file</label>
+        <input type="file" id="file" name="File" accept="application/pdf" required />
+
+        <label for="userPassword">Password (required to open the file)</label>
+        <input type="password" id="userPassword" name="UserPassword" required />
+
+        <label for="ownerPassword">Owner password (optional, controls permissions)</label>
+        <input type="password" id="ownerPassword" name="OwnerPassword" />
+        <p class="hint">If left blank, the same password is used for both.</p>
+
+        <button type="submit">Encrypt PDF</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error">@Model.ErrorMessage</div>
+    }
+</div>

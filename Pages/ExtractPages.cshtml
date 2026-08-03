@@ -1,0 +1,26 @@
+@page
+@model PdfCraftNet.Pages.ExtractPagesModel
+@{
+    ViewData["Title"] = "Extract Pages";
+}
+
+<div class="card">
+    <h1>📑 Extract Pages</h1>
+    <p class="subtitle">Pull specific pages out of a PDF into a new document.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">PDF file</label>
+        <input type="file" id="file" name="File" accept="application/pdf" required />
+
+        <label for="pages">Pages to extract</label>
+        <input type="text" id="pages" name="PageSpec" placeholder="e.g. 1,3,5-7" required />
+        <p class="hint">Comma-separated page numbers and/or ranges, 1-based.</p>
+
+        <button type="submit">Extract Pages</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error">@Model.ErrorMessage</div>
+    }
+</div>

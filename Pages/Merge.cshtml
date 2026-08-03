@@ -1,0 +1,23 @@
+@page
+@model PdfCraftNet.Pages.MergeModel
+@{
+    ViewData["Title"] = "Merge PDF";
+}
+
+<div class="card">
+    <h1>🔗 Merge PDF</h1>
+    <p class="subtitle">Combine multiple PDFs into one document, in the order you pick them.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="files">Select PDF files (2 or more)</label>
+        <input type="file" id="files" name="Files" accept="application/pdf" multiple required />
+        <p class="hint">They'll be merged in the order shown by your file picker.</p>
+
+        <button type="submit">Merge PDFs</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error">@Model.ErrorMessage</div>
+    }
+</div>

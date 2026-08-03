@@ -1,0 +1,42 @@
+@page
+@model PdfCraftNet.Pages.PdfToImageModel
+@{
+    ViewData["Title"] = "PDF to Image";
+}
+
+<div class="card">
+    <h1>🖨️ PDF to Image</h1>
+    <p class="subtitle">
+        Render each page of a PDF as an image. Covers PDF to JPG, PNG, WebP, BMP, and TIFF,
+        plus an optional greyscale mode. Multi-page PDFs download as a .zip.
+    </p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">PDF file</label>
+        <input type="file" id="file" name="File" accept="application/pdf" required />
+
+        <label for="format">Output format</label>
+        <select id="format" name="Format">
+            <option value="png">PNG</option>
+            <option value="jpg">JPG</option>
+            <option value="webp">WebP</option>
+            <option value="bmp">BMP</option>
+            <option value="tiff">TIFF</option>
+        </select>
+
+        <label for="dpi">Resolution (DPI)</label>
+        <input type="number" id="dpi" name="Dpi" min="36" max="600" value="150" />
+
+        <label style="display:flex;align-items:center;gap:0.5rem;margin-top:1rem;">
+            <input type="checkbox" name="Greyscale" value="true" style="width:auto;" />
+            Convert to greyscale
+        </label>
+
+        <button type="submit">Convert to Images</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error">@Model.ErrorMessage</div>
+    }
+</div>

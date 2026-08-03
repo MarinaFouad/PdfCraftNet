@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PdfCraft.NET</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/">📄 PdfCraft.NET</a>
+        <nav>
+            <a href="/Merge">Merge</a>
+            <a href="/Split">Split</a>
+            <a href="/ExtractPages">Extract</a>
+            <a href="/DeletePages">Delete Pages</a>
+            <a href="/RotatePdf">Rotate</a>
+            <a href="/Watermark">Watermark</a>
+            <a href="/PageNumbers">Page Numbers</a>
+            <a href="/EncryptPdf">Encrypt</a>
+            <a href="/ImageToPdf">Image → PDF</a>
+            <a href="/SvgToPdf">SVG → PDF</a>
+            <a href="/CbzToPdf">CBZ → PDF</a>
+            <a href="/PdfToImage">PDF → Image</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <p>PdfCraft.NET — ASP.NET Core PDF toolkit, processed server-side with PdfSharpCore.</p>
+    </footer>
+</body>
+</html>

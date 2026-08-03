@@ -1,0 +1,26 @@
+@page
+@model PdfCraftNet.Pages.ImageToPdfModel
+@{
+    ViewData["Title"] = "Image to PDF";
+}
+
+<div class="card">
+    <h1>🖼️ Image to PDF</h1>
+    <p class="subtitle">
+        Convert JPG, PNG, BMP, TIFF, WebP, or GIF images to a PDF — one page per image.
+        This single tool covers JPG to PDF, PNG to PDF, WebP to PDF, BMP to PDF, and TIFF to PDF.
+    </p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="files">Select image files</label>
+        <input type="file" id="files" name="Files" accept="image/*" multiple required />
+        <p class="hint">Multiple images become multiple pages, in the order you select them.</p>
+
+        <button type="submit">Convert to PDF</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error">@Model.ErrorMessage</div>
+    }
+</div>

@@ -1,0 +1,29 @@
+@page
+@model PdfCraftNet.Pages.PageNumbersModel
+@{
+    ViewData["Title"] = "Page Numbers";
+}
+
+<div class="card">
+    <h1>🔢 Add Page Numbers</h1>
+    <p class="subtitle">Add customizable page numbering to the bottom of every page.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">PDF file</label>
+        <input type="file" id="file" name="File" accept="application/pdf" required />
+
+        <label for="format">Format</label>
+        <input type="text" id="format" name="Format" value="Page {n} of {total}" />
+        <p class="hint">Use <code>{n}</code> for the page number and <code>{total}</code> for the page count.</p>
+
+        <label for="fontSize">Font size</label>
+        <input type="number" id="fontSize" name="FontSize" min="6" max="48" value="10" />
+
+        <button type="submit">Add Page Numbers</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error">@Model.ErrorMessage</div>
+    }
+</div>

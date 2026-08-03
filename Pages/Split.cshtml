@@ -1,0 +1,25 @@
+@page
+@model PdfCraftNet.Pages.SplitModel
+@{
+    ViewData["Title"] = "Split PDF";
+}
+
+<div class="card">
+    <h1>✂️ Split PDF</h1>
+    <p class="subtitle">Break a PDF into smaller files of N pages each. You'll get a .zip back.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">PDF file</label>
+        <input type="file" id="file" name="File" accept="application/pdf" required />
+
+        <label for="pagesPerChunk">Pages per file</label>
+        <input type="number" id="pagesPerChunk" name="PagesPerChunk" min="1" value="1" required />
+
+        <button type="submit">Split PDF</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="error">@Model.ErrorMessage</div>
+    }
+</div>

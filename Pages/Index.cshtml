@@ -1,0 +1,60 @@
+@page
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="card">
+    <h1>PdfCraft.NET</h1>
+    <p class="subtitle">A small self-hosted PDF toolkit built with ASP.NET Core.</p>
+
+    <div class="tool-grid">
+        <a class="tool-card" href="/Merge">
+            <h3>🔗 Merge PDF</h3>
+            <p>Combine multiple PDFs into one document.</p>
+        </a>
+        <a class="tool-card" href="/Split">
+            <h3>✂️ Split PDF</h3>
+            <p>Break a PDF into chunks of N pages, downloaded as a zip.</p>
+        </a>
+        <a class="tool-card" href="/ExtractPages">
+            <h3>📑 Extract Pages</h3>
+            <p>Pull specific pages out into a new PDF.</p>
+        </a>
+        <a class="tool-card" href="/DeletePages">
+            <h3>🗑️ Delete Pages</h3>
+            <p>Remove specific pages from a PDF.</p>
+        </a>
+        <a class="tool-card" href="/RotatePdf">
+            <h3>🔄 Rotate PDF</h3>
+            <p>Rotate all or specific pages by 90/180/270°.</p>
+        </a>
+        <a class="tool-card" href="/Watermark">
+            <h3>💧 Add Watermark</h3>
+            <p>Stamp a diagonal text watermark on every page.</p>
+        </a>
+        <a class="tool-card" href="/PageNumbers">
+            <h3>🔢 Page Numbers</h3>
+            <p>Add customizable page numbering to every page.</p>
+        </a>
+        <a class="tool-card" href="/EncryptPdf">
+            <h3>🔒 Encrypt PDF</h3>
+            <p>Password-protect a PDF file.</p>
+        </a>
+        <a class="tool-card" href="/ImageToPdf">
+            <h3>🖼️ Image to PDF</h3>
+            <p>JPG, PNG, BMP, TIFF, WebP → PDF, one page per image.</p>
+        </a>
+        <a class="tool-card" href="/SvgToPdf">
+            <h3>🎨 SVG to PDF</h3>
+            <p>Rasterize a vector SVG into a single-page PDF.</p>
+        </a>
+        <a class="tool-card" href="/CbzToPdf">
+            <h3>📚 CBZ to PDF</h3>
+            <p>Turn a comic book archive into a PDF.</p>
+        </a>
+        <a class="tool-card" href="/PdfToImage">
+            <h3>🖨️ PDF to Image</h3>
+            <p>Export pages as JPG, PNG, WebP, BMP, or TIFF — greyscale optional.</p>
+        </a>
+    </div>
+</div>
