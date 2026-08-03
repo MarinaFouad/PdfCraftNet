@@ -3,6 +3,8 @@ watch the demo
 <h2>🎥 Demo</h2>
  
 
+https://github.com/user-attachments/assets/1be9c065-fa5d-4ce7-97f0-a40fcfbf1c9d
+
 # PdfCraft.NET
 
 A small ASP.NET Core (Razor Pages) port of a subset of PDFCraft's tools. Unlike the
@@ -12,8 +14,6 @@ version processes PDFs **server-side** using [PdfSharpCore](https://github.com/s
 
 ## Included tools (12)
 
-
-https://github.com/user-attachments/assets/1be9c065-fa5d-4ce7-97f0-a40fcfbf1c9d
 
 
 
